@@ -6,20 +6,35 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { NewPage } from '../pages/new/new';
+import { ProdPage } from '../pages/prod/prod';
+import { InfoPage } from '../pages/info/info';
+
+import {IonicStorageModule} from '@ionic/storage';
+import { CartPage } from '../pages/cart/cart';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    NewPage,
+    ProdPage,
+    InfoPage,
+    CartPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    NewPage,
+    ProdPage,
+    InfoPage,
+    CartPage
   ],
   providers: [
     StatusBar,

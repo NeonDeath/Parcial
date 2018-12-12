@@ -1,0 +1,26 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mi carrito</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style = "background-color: #8CC7A1">
+
+  <ion-card *ngFor = "let c of carrito">
+    <img [src] = c.imagen>
+    <ion-item>
+      <p>{{c.nombre}}</p>
+      <p>{{c.precio}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
